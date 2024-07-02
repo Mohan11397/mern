@@ -7,6 +7,7 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const root_url = process.env.REACT_APP_ROOT_URL;
 
   const dispatch = useDispatch();
   const handleUsernameChange = (event) => {
@@ -20,7 +21,7 @@ function LoginPage() {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/api/user/login", {
+      const response = await fetch(`${root_url}api/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
