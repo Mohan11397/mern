@@ -11,17 +11,17 @@ const FruitShop = () => {
         <div>
           <ul className="flex space-x-8">
             <li className="menu border-b-4">
-              <a className="font-body no-underline  hover:text-white" href="#">
+              <a className="font-body no-underline  hover:text-white" href="/">
                 Fruits
               </a>
             </li>
             <li className="menu">
-            <a className="font-body no-underline  hover:text-white" href="#">
+            <a className="font-body no-underline  hover:text-white" href="/">
                 Vegetables
               </a>
             </li>
             <li className="menu">
-              <a className="font-body no-underline  hover:text-white" href="#">
+              <a className="font-body no-underline  hover:text-white" href="/">
                 More
               </a>
             </li>

@@ -1,11 +1,11 @@
 // src/components/TableComponent.js
 import React, { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteTaskFromServer,
   getTasksFromServer,
-  setSelectedTask,
+  // setSelectedTask,
 } from "../../slices/tasksSlice";
 import CreateTaskModal from "./createTaskModal";
 import generatePDF from "../generatepdf/generatePDF";
@@ -210,7 +210,7 @@ const TableComponent = () => {
                   <td className="px-6 py-4">{task.description}</td>
                   <td className="px-6 py-4">
                     <div className="flex justify-start gap-4">
-                      <a href="#">
+                      <a href="/">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -227,7 +227,7 @@ const TableComponent = () => {
                           />
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="/">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"

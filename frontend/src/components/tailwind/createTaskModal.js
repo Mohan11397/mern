@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { addTaskToServer, updateTaskInServer } from "../../slices/tasksSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
 
 const CreateTaskModal = ({ isOpen, toggleModal, task }) => {
   // const { selectedTask } = useSelector((state) => state.tasks);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  console.log("params task: ", task);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState(true);
   const [id, setId] = useState();
+  console.log("params task: ", id);
 
   const handleStatusChange = (event) => {
     const selectedValue = event.target.value;
@@ -72,7 +72,7 @@ const CreateTaskModal = ({ isOpen, toggleModal, task }) => {
       setDescription(task.description);
       setId(task.id);
     }
-  }, [task.description, task.id, task.title]);
+  }, [task, task.description, task.id, task.title]);
   return (
     <>
       {isOpen && (
